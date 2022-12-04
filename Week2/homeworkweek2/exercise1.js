@@ -145,7 +145,7 @@ const aggregateQueries = [
         ON awp.paper_id = rp.paper_id 
       GROUP BY rp.paper_title;`,
 
-    // Sum of the research papers published by all female authors.
+    // Sum of the research papers published by all female authors
     `SELECT authors.gender, COUNT(awp.paper_id) AS 'Research Papers by Female'
       FROM research_paper AS rp
       LEFT JOIN authorsWithPapers AS awp 
